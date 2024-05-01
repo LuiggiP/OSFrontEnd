@@ -5,6 +5,7 @@ import {MatTab, MatTabGroup} from "@angular/material/tabs";
 import {MatList, MatListItem} from "@angular/material/list";
 import {MatButton} from "@angular/material/button";
 import {MatInput} from "@angular/material/input";
+import {MatToolbar} from "@angular/material/toolbar";
 
 @Component({
   selector: 'app-profile',
@@ -17,7 +18,8 @@ import {MatInput} from "@angular/material/input";
     MatList,
     MatListItem,
     MatButton,
-    MatInput
+    MatInput,
+    MatToolbar
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
