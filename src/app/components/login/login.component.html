@@ -1,1 +1,42 @@
-<p>login works!</p>
+<mat-toolbar color="primary">
+  <img src="assets/logo.png" alt="SecurcarLogo" class="toolbar-logo">
+</mat-toolbar>
+
+<div class="main-content">
+  <img src="assets/woman.png" alt="woman" class="woman-login">
+  <div class="content">
+    <mat-card>
+      <mat-card-content>"¡Bienvenido! Inicia sesión para continuar tu viaje seguro con nosotros."</mat-card-content>
+    </mat-card>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <div class="inputs">
+      <mat-form-field class="input-field">
+        <input matInput placeholder="Correo electrónico o teléfono" formControlName="email">
+      </mat-form-field>
+      <mat-form-field class="input-field">
+
+        <input matInput placeholder="Contraseña" type="password" formControlName="password">
+
+      </mat-form-field>
+    </div>
+    <button mat-button style="font-weight: bold ">Olvidé mi Contraseña?</button>
+    <div class="row-buttons">
+      <button mat-raised-button style="background-color:#D9D9D9; padding: 20px 40px ">Ingresar</button>
+      <button mat-stroked-button style="background-color:#D9D9D9; padding: 20px 40px ">Registrar</button>
+    </div>
+  </form>
+  <div class="contact">
+    <div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/2048px-Facebook_icon.svg.png" width="80px" height="80px">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" width="80px" height="80px">
+    </div>
+
+    <div class="contact-content">
+      <button mat-icon-button>
+        <mat-icon>mail</mat-icon>
+      </button>
+      <span>Contáctanos</span>
+    </div>
+  </div>
+</div>
