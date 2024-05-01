@@ -4,11 +4,12 @@ import {DeviceInformationComponent} from "./components/device-information/device
 import {LocationSharingComponent} from "./components/location-sharing/location-sharing.component";
 import {LoginComponent} from "./components/login/login.component";
 import {RegisterComponent} from "./components/register/register.component";
+import {VehicleInformationComponent} from "./components/vehicle-information/vehicle-information.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DeviceInformationComponent, LocationSharingComponent, LoginComponent, RegisterComponent],
+  imports: [RouterOutlet, DeviceInformationComponent, LocationSharingComponent, LoginComponent, RegisterComponent, VehicleInformationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
