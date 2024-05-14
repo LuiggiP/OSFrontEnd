@@ -34,11 +34,20 @@
 
       <label>Contraseña</label>
       <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
-
         <input matInput [type]="hide ? 'password' : 'text'" placeholder="SecretPassword">
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
+      </mat-form-field>
+
+      <label>Empresa Afiliada</label>
+      <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
+        <mat-select>
+          <mat-option value="one">Uber</mat-option>
+          <mat-option value="two">Indriver</mat-option>
+          <mat-option value="three">Didi</mat-option>
+          <mat-option value="four">Cabify</mat-option>
+        </mat-select>
       </mat-form-field>
 
     </form>

@@ -7,6 +7,7 @@ import {ProfileComponent} from "./components/profile/profile.component";
 import {DeviceInformationComponent} from "./components/device-information/device-information.component";
 import {LocationSharingComponent} from "./components/location-sharing/location-sharing.component";
 import {VehicleTrackingComponent} from "./components/vehicle-tracking/vehicle-tracking.component";
+import {TaxiDriverRegisterComponent} from "./components/register-TaxiDriver/register.component";
 
 export const routes: Routes = [
   {
@@ -14,6 +15,9 @@ export const routes: Routes = [
   },
   {
     path: 'register', component: RegisterComponent
+  },
+  {
+    path: 'taxi-driver-register', component: TaxiDriverRegisterComponent
   },
   {
     path: 'main-screen', component: MainScreenComponent
