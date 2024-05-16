@@ -1,0 +1,76 @@
+.the-toolbar {
+  background-color: #446DFF;
+
+  display: flex;
+  /*align-items: center;*/
+  justify-content: space-between;
+  font-family: "Product Sans", sans-serif;
+  color: white;
+  height: 5rem;
+}
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  /*justify-content: center;*/
+  gap: 1.5rem;
+  padding-left: 1rem;
+
+  font-size: 1.75rem;
+}
+.toolbar-middle-space {
+  background-color: white;
+  width: 400px;
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 7px;
+  input{
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: 100%;
+  }
+}
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-right: 1rem;
+}
+
+.mail-shortcut {
+  transition: background-color 150ms ease;
+  border-radius: 2.5rem;
+  padding: 0.35rem;
+}
+.mail-shortcut:hover {
+  cursor: pointer;
+  background-color: #d4d9e1;
+}
+.account-shortcut {
+  transition: background-color 150ms ease;
+  border-radius: 2.5rem;
+  padding: 0.35rem;
+}
+.account-shortcut:hover {
+  cursor: pointer;
+  background-color: #80A0FF;
+}
+.logout-shortcut {
+  transition: background-color 150ms ease;
+  border-radius: 2.5rem;
+  padding: 0.35rem;
+}
+.logout-shortcut:hover {
+  cursor: pointer;
+  background-color: #80A0FF;
+}
+.securcar-logo {
+  border-radius: 99rem;
+}
+
