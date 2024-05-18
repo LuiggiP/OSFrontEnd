@@ -6,9 +6,7 @@ import {MatTab, MatTabGroup} from "@angular/material/tabs";
 import {MatList, MatListItem, MatListItemLine, MatListItemTitle} from "@angular/material/list";
 import {MatIcon} from "@angular/material/icon";
 import {MatDivider} from "@angular/material/divider";
-
-
-
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-vehicleinformation',
@@ -33,4 +31,9 @@ import {MatDivider} from "@angular/material/divider";
 })
 export class VehicleInformationComponent {
 
+  constructor(private router: Router) { }
+
+  onIconCLick() {
+    this.router.navigate(['/main-screen']);
+  }
 }

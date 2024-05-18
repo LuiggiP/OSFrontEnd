@@ -27,8 +27,7 @@ import {DetailLabelComponent} from "./detail-label.component/detail-label.compon
 export class DeviceInformationComponent {
   constructor(private router: Router) { }
 
-  goBack() {
-
-    this.router.navigate(['/']);
+  onIconCLick() {
+    this.router.navigate(['/main-screen']);
   }
 }

@@ -11,6 +11,9 @@ import {TaxiDriverRegisterComponent} from "./components/register-TaxiDriver/regi
 
 export const routes: Routes = [
   {
+    path: '', redirectTo: '/login', pathMatch: 'full'
+  },
+  {
     path: 'login', component: LoginComponent,
   },
   {

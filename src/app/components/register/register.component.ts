@@ -4,7 +4,7 @@ import {MatIcon} from "@angular/material/icon";
 import {MatCard, MatCardContent} from "@angular/material/card";
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInput} from "@angular/material/input";
-
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -23,4 +23,9 @@ import {MatInput} from "@angular/material/input";
 })
 export class RegisterComponent {
   hide = true
+  constructor(private router: Router) {
+  }
+  onIconClick() {
+    this.router.navigate(['/login'])
+  }
 }

@@ -5,6 +5,7 @@ import {DetailLabelComponent} from "./detail-label.component/detail-label.compon
 import {MatButton} from "@angular/material/button";
 import {NgOptimizedImage} from "@angular/common";
 import { MatIconModule } from '@angular/material/icon';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-vehicle-tracking',
@@ -21,5 +22,9 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './vehicle-tracking.component.css'
 })
 export class VehicleTrackingComponent {
+  constructor(private router: Router) { }
 
+  onIconCLick() {
+    this.router.navigate(['/main-screen']);
+  }
 }

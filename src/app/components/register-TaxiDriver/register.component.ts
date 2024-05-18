@@ -6,6 +6,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInput} from "@angular/material/input";
 import {MatOption} from "@angular/material/autocomplete";
 import {MatSelect} from "@angular/material/select";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -27,4 +28,9 @@ import {MatSelect} from "@angular/material/select";
 })
 export class TaxiDriverRegisterComponent {
   hide = true
+  constructor(private router: Router) {
+  }
+  onIconClick() {
+    this.router.navigate(['/login'])
+  }
 }
