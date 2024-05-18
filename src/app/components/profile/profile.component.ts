@@ -6,6 +6,10 @@ import {MatList, MatListItem} from "@angular/material/list";
 import {MatButton} from "@angular/material/button";
 import {MatInput} from "@angular/material/input";
 import {MatToolbar} from "@angular/material/toolbar";
+import {ToolbarComponentComponent} from "./toolbar.component/toolbar.component.component";
+import {
+  ProfileInformationComponentComponent
+} from "./profile-information.component/profile-information.component.component";
 
 @Component({
   selector: 'app-profile',
@@ -19,7 +23,9 @@ import {MatToolbar} from "@angular/material/toolbar";
     MatListItem,
     MatButton,
     MatInput,
-    MatToolbar
+    MatToolbar,
+    ToolbarComponentComponent,
+    ProfileInformationComponentComponent
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'

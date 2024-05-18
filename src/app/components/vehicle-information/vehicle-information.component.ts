@@ -1,24 +1,34 @@
 import { Component } from '@angular/core';
 import {MatToolbar} from "@angular/material/toolbar";
 import {MatCard, MatCardContent} from "@angular/material/card";
+import {MatButton, MatIconButton} from "@angular/material/button";
 import {MatTab, MatTabGroup} from "@angular/material/tabs";
-import {MatList, MatListItem} from "@angular/material/list";
-import {MatButton} from "@angular/material/button";
+import {MatList, MatListItem, MatListItemLine, MatListItemTitle} from "@angular/material/list";
+import {MatIcon} from "@angular/material/icon";
+import {MatDivider} from "@angular/material/divider";
+
+
+
 
 @Component({
-  selector: 'app-vehicle-information',
+  selector: 'app-vehicleinformation',
   standalone: true,
   imports: [
     MatToolbar,
     MatCard,
     MatCardContent,
+    MatButton,
     MatTabGroup,
     MatTab,
-    MatListItem,
     MatList,
-    MatButton
+    MatListItem,
+    MatIcon,
+    MatIconButton,
+    MatDivider,
+    MatListItemTitle,
+    MatListItemLine
   ],
-  templateUrl: './vehicle-information.component.html',
+  templateUrl: `./vehicle-information.component.html`,
   styleUrl: './vehicle-information.component.css'
 })
 export class VehicleInformationComponent {

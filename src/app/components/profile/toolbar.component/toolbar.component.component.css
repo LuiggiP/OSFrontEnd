@@ -1,0 +1,59 @@
+.the-toolbar {
+  background-color: #446DFF;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Product Sans", sans-serif;
+  color: white;
+  height: 5rem;
+}
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-left: 1rem;
+
+  font-size:  1.75rem;
+}
+.toolbar-middle-space {
+  flex: 1 1 auto;
+}
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-right: 1rem;
+}
+.back-icon {
+  color: white;
+  transform: scale(1.6);
+  transition: background-color 150ms ease;
+  border-radius: 2rem;
+  padding: 0.4rem;
+}
+.back-icon:hover {
+  cursor: pointer;
+  background-color: #80A0FF;
+}
+.account-shortcut {
+  transition: background-color 150ms ease;
+  border-radius: 2.5rem;
+  padding: 0.35rem;
+}
+.account-shortcut:hover {
+  cursor: pointer;
+  background-color: #80A0FF;
+}
+.logout-shortcut {
+  transition: background-color 150ms ease;
+  border-radius: 2.5rem;
+  padding: 0.35rem;
+}
+.logout-shortcut:hover {
+  cursor: pointer;
+  background-color: #80A0FF;
+}
+

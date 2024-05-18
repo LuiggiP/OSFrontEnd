@@ -6,6 +6,9 @@ import {MatFormField} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import {MatButton, MatIconButton} from "@angular/material/button";
 import {MatIcon} from "@angular/material/icon";
+import {LoginToolbarComponent} from "./login-toolbar.component/login-toolbar.component.component";
+import {LoginContentComponentComponent} from "./login-content.component/login-content.component.component";
+import {LoginFooterComponentComponent} from "./login-footer.component/login-footer.component.component";
 
 @Component({
   selector: 'app-login',
@@ -19,7 +22,10 @@ import {MatIcon} from "@angular/material/icon";
     MatInput,
     MatButton,
     MatIconButton,
-    MatIcon
+    MatIcon,
+    LoginContentComponentComponent,
+    LoginFooterComponentComponent,
+    LoginToolbarComponent
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'

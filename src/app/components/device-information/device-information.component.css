@@ -1,195 +1,112 @@
-.headercarinformation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px 0;
-  border-bottom: 1px solid #ccc;
-  background-color: #8388F2;
-}
+.the-toolbar {
+  background-color: #446DFF;
 
-.backoption {
-  display: flex;
-  padding-left: 20px;
-}
-
-.backoption img {
-  width: 30px;
-  height: 60px;
-  margin-right: 30px;
-}
-
-.headertext {
-  color: black;
-  font-size: 1.5rem;
-  font-weight: 400;
-  padding-top: 10px;
-}
-
-.SecondSection{
-  display: flex;
-  justify-content: space-between;
-  padding-right:10px ;
-}
-
-.SecondSection img{
-  width: 50px;
-  height: 70px;
-  padding-right: 10px;
-
-}
-
-
-.bck1 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-
-  background-image: url('/assets/bck1.png');
-  z-index: 0; /* Establecemos un z-index menor que el del contenido */
-}
-
-.card {
-  position: relative; /* Aseguramos que el contenido esté posicionado correctamente */
-  z-index: 3; /* Establecemos un z-index mayor que el de la imagen de fondo */
-  background-image: url('/assets/bck1.png');
-  align-items: center;
-
-}
-
-.card1{
-  margin: auto;
-  margin-top: 50px;
-  width: 1200px;
-  height: 800px;
-
-
-}
-
-.cardefault {
-  width: 80%;
-  height: 100%;
-  margin: 0 auto;
-  padding: 10px;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-
-
-.cardefaults {
-  padding-left: 30px;
-  width: 40%;
-
-}
-
-.cardefault .title {
-  font-weight: bold;
-  grid-column: 1;
-
-}
-
-.cardefault .content {
-
-  grid-column: 1;
-}
-
-.buttoncar{
-  width: 200px;
-  background-color: lightgrey;
-  border: none;
-  grid-column: 1;
-}
-
-.sateliteimage {
-  display: flex;
-  justify-content: space-between;
-
-  padding-left: 10px;
-  padding-top: 10px;
-  width: 260px;
-  height: 100px;
-  grid-column: 1;
-
-}
-
-
-.sateliteimage img {
-  width: 50px;
-  height: 50px;
-}
-
-.onlineform {
-  margin-top: 10px;
-  padding-right: 10px;
-
-}
-
-.mapssection{
-  background-color: green;
-  width: 100%;
-  height: 100%;
-  grid-column: 2;
-}
-
-.maps {
-  width:120%;
-  height: 100%;
-}
-
-.tabgroup {
-  background-color: transparent;
-
-}
-
-.tab1{
-  background-color: transparent;
-  z-index: 1;
-}
-
-.iconmap {
   display: flex;
   align-items: center;
+  justify-content: center;
+  font-family: "Product Sans", sans-serif;
+  color: white;
+  height: 5rem;
+}
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-left: 1rem;
+
+  font-size: 1.75rem;
+}
+.toolbar-middle-space {
+  flex: 1 1 auto;
+}
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-right: 1rem;
+}
+.back-icon {
+  color: white;
+  transform: scale(1.6);
+  transition: background-color 150ms ease;
+  border-radius: 2rem;
+  padding: 0.4rem;
+}
+.back-icon:hover {
+  cursor: pointer;
+  background-color: #80A0FF;
+}
+.account-shortcut {
+  transition: background-color 150ms ease;
+  border-radius: 2.5rem;
+  padding: 0.35rem;
+}
+.account-shortcut:hover {
+  cursor: pointer;
+  background-color: #80A0FF;
 }
 
-.iconmap img{
-  width: 50px;
-  padding-bottom: 46px;
+
+
+.content-section {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 2rem;
 }
-
-
-.buttonsatelite{
-  width: 200px;
-  background-color: lightgrey;
-  border: none;
-  grid-column: 1;
-  margin-left: 10px;
-
+.device-information-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-
-
-.tabgroup{
-  background-image: url("/assets/bck1.png");
-}
-
-.tab1{
+.device-image {
   background-color: white;
+  padding: 0.25rem;
+  border-radius: 99rem;
+  box-sizing: border-box;
+  border: 0.25rem solid #B6C2FF;
 }
-
-.imagen {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+.map-image {
+  border-radius: 3rem;
 }
-
-.cuadro2 {
+.share-button {
+  border-radius: 99rem;
+  font-family: "Product Sans", sans-serif;
+  letter-spacing: 0.05rem;
+  padding: 1.5rem 2rem;
+  border-width: 0.15rem;
+}
+.share-icon {
+  filter: brightness(0%);
+}
+.share-section {
   display: flex;
-  align-items: center;
-  padding: 10px;
+  gap: 1rem;
+}
+.device-information-wrapper {
+  background-color: white;
+  padding: 1rem 2rem 0;
+  margin: 2rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  border: 2px solid #8E8E8E;
+  width: 400px;
+
+  font-size: 1.25rem;
+  font-family: "Product Sans", sans-serif;
 }
 
-textarea {
+.holder {
+  display: flex;
+  flex-direction: column;
   flex: 1;
-  margin-right: 10px;
+  height: 100%;
+}
+.space {
+  background-color: white;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
 }

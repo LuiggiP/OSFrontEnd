@@ -1,0 +1,32 @@
+.the-toolbar {
+  background-color: #446DFF;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Product Sans", sans-serif;
+  color: white;
+  height: 5rem;
+}
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.0rem;
+  padding-left: 0.5rem;
+
+  font-size: 1.75rem;
+}
+.toolbar-middle-space {
+  flex: 1 1 auto;
+}
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-right: 1rem;
+}
+.securcar-logo {
+  border-radius: 99rem;
+}

@@ -1,84 +1,61 @@
-<mat-toolbar color="primary">
-  <mat-icon>arrow_back</mat-icon>
-  <span>Rastreo y ubicación</span>
-  <span class="spacer"></span>
-  <mat-icon>account_circle</mat-icon>
-  <mat-icon>exit_to_app</mat-icon>
-</mat-toolbar>
+<div class="holder">
 
-<div class="container">
-  <div class="sidebar">
-    <img src="assets/vehicle-foto.png" alt="Vehicle" class="vehicle-image">
-    <div class="vehicle-details">
-      <p>Placa: XXX-XXX</p>
-      <p>Modelo: car1</p>
-      <p>Nombre del vehículo: 'xxxxxxx'</p>
-      <div style="display: flex; justify-content: center; align-items: center;" >
-        <mat-icon style="color: green">radio_button_checked</mat-icon> Seguro
-      </div>
+  <mat-toolbar class="the-toolbar">
+    <div class="toolbar-left">
+      <mat-icon class="back-icon" aria-hidden="false" aria-label="Back Icon">arrow_back_ios</mat-icon>
+      <span>Rastreo y Ubicación</span>
+    </div>
 
-      <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 30px;  justify-content: space-evenly">
-        <img src="https://static-00.iconduck.com/assets.00/gps-icon-2048x2046-a8jd6d82.png" style="width: 70px;">
-        <div style="display: flex; flex-direction: column; justify-content: center" >
-          <span>Dispositivo: "XXXXXXXX"</span>
-          <div style="display: flex; align-items: center">
-            <mat-icon style="color: green">radio_button_checked</mat-icon> Seguro
-          </div>
+    <div class="toolbar-middle-space"></div>
+
+    <div class="toolbar-right">
+      <img class="account-shortcut" src="./assets/account-icon.png" alt="account-icon" height="50" width="50">
+    </div>
+  </mat-toolbar>
+
+  <div class="content-section space">
+    <div class="device-information-section">
+      <img class="device-image"
+           src="./assets/silver_car.jpeg"
+           alt="Device Image"
+           height="250" width="250">
+
+      <div class="device-information-wrapper">
+        <div class="wrapper">
+          <detail-label label="Nombre" information="Carro" [outlineWidth]="2"></detail-label>
+          <detail-label label="Placa" information="ABC-123" [outlineWidth]="2"></detail-label>
+          <detail-label label="Estado" information="Seguro"><span class="status-indicator"></span> </detail-label>
+
         </div>
       </div>
+    </div>
 
-      <button style="padding: 5px 100px; margin-bottom: 20px">Rastrear</button>
+    <div class="map-section">
+      <img class="map-image"
+           src="./assets/map-example.png"
+           alt="Map Image"
+           height="557" width="909">
 
-      <div style="display: flex; align-items: center">
-        <img src="https://cdn-icons-png.flaticon.com/512/4120/4120467.png" width="150px">
-        <button style="padding: 5px 50px; margin-bottom: 20px">Compartir Ubicacion</button>
+      <div class="buttons-section">
+        <button class="custom-button" mat-stroked-button>
+          <img class="button-icon" src="assets/locate-warning-icon.png" height="40" width="40" alt="locate">Ubicar puntos de riesgos
+        </button>
+        <button class="custom-button" mat-stroked-button>
+          <img class="button-icon" src="assets/share-icon.png" height="40" width="40" alt="share">Compartir ubicación
+        </button>
+        <button class="custom-button" mat-stroked-button>
+          <img class="button-icon" src="assets/mic-icon.png" height="40" width="40" alt="audio">Grabar audio de entorno
+        </button>
       </div>
-
     </div>
   </div>
 
-  <div class="right">
-
-    <div class="image" style="margin-bottom: 30px" >
-      <img src="/assets/map-example.png" width="900px" height="300px">
-      <img src="https://static.vecteezy.com/system/resources/thumbnails/012/042/292/small/warning-sign-icon-transparent-background-free-png.png" width="70px" class="warning1">
-      <img src="https://static.vecteezy.com/system/resources/thumbnails/012/042/292/small/warning-sign-icon-transparent-background-free-png.png" width="70px" class="warning2">
-    </div>
-
-    <div style="text-align: start; margin-left: 40px"  class="seguimiento">
-      <mat-icon style="color: green">radio_button_checked</mat-icon> Seguimiento
-    </div>
-
-    <div class="buttons">
-      <div>
-        <button>Ubicar Puntos De Riesgo</button>
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/012/042/292/small/warning-sign-icon-transparent-background-free-png.png" width="70px" class="warning2">
-      </div>
-      <div>
-        <img src="https://c0.klipartz.com/pngpicture/135/8/gratis-png-iconos-de-la-computadora-del-microfono-microfono.png" width="50px">
-        <button>Grabar audio de entorno</button>
-      </div>
-
-    </div>
-
-    <div class="info_users">
-      <div>
-        <span>Informacion De Usuario #0000001</span>
-        <mat-icon style="color: black">person</mat-icon>
-      </div>
-      <div>
-        <span>Informacion De Usuario #0000002</span>
-        <mat-icon style="color:black ">person</mat-icon>
-      </div>
-      <div>
-        <span>Informacion De Usuario #0000003</span>
-        <mat-icon style="color:black ">person</mat-icon>
-      </div>
-
-    </div>
-
+  <div class="additional-section">
+    <h2>Ubicar puntos de riesgos</h2>
   </div>
+
+  <button class="call-button">
+    <img src="assets/call-icon.png" alt="call" class="call-icon">
+  </button>
 
 </div>
-
-

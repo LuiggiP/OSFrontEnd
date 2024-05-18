@@ -1,0 +1,43 @@
+.main-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Product Sans", sans-serif;
+}
+.actual-container {
+  background-color: #C5CEFF;
+  width: 850px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user-information-wrapper {
+  background-color: white;
+  padding: 2rem 2rem 0;
+  margin: 2rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  border: 2px solid #8E8E8E;
+  width: 750px;
+
+  font-size: 1.25rem;
+}
+.wrapper {
+  padding-left: 1.5rem;
+}
+
+.user-profile-photo {
+  border-radius: 99rem;
+  margin: 1rem;
+  padding: 0.25rem;
+  box-sizing: border-box;
+  border: 5px solid #B6C2FF;
+}
+.hello-user {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  margin: 1rem;
+}

@@ -1,100 +1,188 @@
-.container {
+.the-toolbar {
+  background-color: #446DFF;
   display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  font-family: "Product Sans", sans-serif;
+  color: white;
+  height: 7rem;
 }
 
-.sidebar {
-  width: 25%;
-  height: 650px;
-  padding: 20px;
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-left: 1rem;
+  font-size: 2rem;
+}
+
+.toolbar-middle-space {
+  flex: 1 1 auto;
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-right: 1rem;
+}
+
+.back-icon {
+  color: white;
+  transform: scale(1.5);
+  transition: background-color 150ms ease;
+  border-radius: 2rem;
+  padding: 0.4rem;
+}
+
+.back-icon:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.account-shortcut {
+  transition: background-color 150ms ease;
+  border-radius: 2.5rem;
+  padding: 0.35rem;
+}
+
+.account-shortcut:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.content-section {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.device-information-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #6892F8;
 }
 
-.vehicle-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.vehicle-details {
-  width: 100%;
-  text-align: center;
-  button{
-    background-color: #D9D9D9;
-    border: none;
-    cursor: pointer;
-  }
-}
-
-.right{
-  width: 70%;
-  background-color: #3771C8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .image{
-    margin-top: 20px;
-    height: 300px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .warning1{
-      position: absolute;
-      top: 30px;
-      left: 80px;
-    }
-    .warning2{
-      position: absolute;
-      bottom: 30px;
-      right: 80px;
-    }
-  }
-
-}
-.seguimiento{
-  background-color: #BBBBBB;
-  width: 13%;
-  padding: 10px;
+.device-image {
+  background-color: white;
+  padding: 0.25rem;
+  border-radius: 99rem;
   box-sizing: border-box;
-  border-radius: 10px;
+  border: 0.25rem solid #B6C2FF;
+}
+
+.device-information-wrapper {
+  background-color: white;
+  padding: 1rem 2rem 0;
+  margin: 2rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  border: 2px solid #8E8E8E;
+  width: 400px;
+  font-size: 1.25rem;
+  font-family: "Product Sans", sans-serif;
+}
+
+.map-section {
+  position: relative;
+}
+
+.map-image {
+  border-radius: 1rem;
+}
+
+.buttons-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.custom-button {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+  font-family: "Product Sans", sans-serif;
+  font-size: 1rem;
+  border-radius: 99rem;
+  padding: 0.5rem 2rem;
+  transition: background-color 150ms ease, border-color 150ms ease;
+  border: 2px solid black; /* Borde negro por defecto */
+  color: black; /* Texto e íconos negros por defecto */
 }
-.buttons{
-  margin-top: 30px;
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
-  div{
-    display: flex;
-    align-items: center;
-  }
-  button{
-    padding: 10px;
-    background-color: #D9D9D9;
-    border: none;
-    margin: 5px;
-    cursor: pointer;
+
+.button-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  filter: brightness(0); /* Hace el ícono negro */
+}
+
+.custom-button:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Fondo más visible en hover */
+  border-color: #446DFF; /* Borde negro en hover */
+}
+
+@media (max-width: 768px) {
+  .buttons-section {
+    flex-direction: column;
   }
 }
 
-.info_users{
-  width: 80%;
+
+/* Nueva sección adicional de abajo */
+.additional-section {
+  background-color: #d9e3f0;
+  padding: 2rem;
+  margin: 0 2rem; /* Quita el margen superior para que no haya espacio entre secciones */
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.additional-section h2 {
+  font-family: "Product Sans", sans-serif;
+  font-size: 1.5rem;
+  color: #3f51b5;
+  margin-bottom: 1rem;
+  text-align: center; /* Centrar el texto */
+}
+
+.content-box {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100px; /* Ajusta según el contenido */
   display: flex;
-  flex-direction: column;
-  div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #D9D9D9;
-    margin: 5px;
-  }
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para el botón de llamada */
+.call-button {
+  position: absolute;
+  bottom: 2rem;
+  right: 1rem;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 150ms ease;
+}
+
+.call-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.call-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0); /* Hace el ícono negro */
 }
