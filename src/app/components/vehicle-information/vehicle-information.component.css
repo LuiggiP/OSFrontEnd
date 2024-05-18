@@ -48,6 +48,26 @@ span{
   font-family: 'Open Sans', sans-serif;
 }
 
+.back-icon {
+  color: white;
+  transform: scale(1.6);
+  transition: background-color 150ms ease;
+  border-radius: 2rem;
+  padding: 0.4rem;
+}
+.back-icon:hover {
+  cursor: pointer;
+  background-color: #80A0FF;
+}
+.account-shortcut {
+  transition: background-color 150ms ease;
+  border-radius: 2.5rem;
+  padding: 0.35rem;
+}
+.account-shortcut:hover {
+  cursor: pointer;
+  background-color: #80A0FF;
+}
 
 
 .backoption {
@@ -128,6 +148,7 @@ span{
   border-color: black;
   padding-bottom: 20%;
   padding-top: 10%;
+  margin-top: 1.5vh;
 
   display:flex;
   flex-direction: column;
@@ -135,6 +156,8 @@ span{
 
 
 }
+
+
 
 .titlecontainer{
   font-family: 'Open Sans Bold', sans-serif;
@@ -165,11 +188,73 @@ span{
 
 }
 
+.the-toolbar {
+  background-color: #446DFF;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Product Sans", sans-serif;
+  color: white;
+  height: 5rem;
+}
+
+.phoneimage{
+  color:black;
+  width: 50px;
+  height: 50px;
+
+
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-left: 1rem;
+
+  font-size: 1.75rem;
+}
+.toolbar-middle-space {
+  flex: 1 1 auto;
+}
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-right: 1rem;
+}
+
 .buttoncar{
   width: 200px;
   background-color: lightgrey;
   border: none;
   grid-column: 1;
+}
+
+.phone{
+  grid-column: 1;
+  display: flex;
+
+
+
+
+
+
+}
+
+.buttonphone{
+  border: solid 1px;
+  border-radius: 50%;
+  border-color: #898989;
+  margin-top: 1vh;
+  width: 80px;
+  height: 70px;
+
+
+
 }
 
 .sateliteimage {
@@ -181,6 +266,7 @@ span{
   padding-top: 20px;
   padding-bottom:20px;
   width: 70%;
+
 
   grid-column: 1;
   flex-direction: row;
@@ -233,9 +319,12 @@ span{
 }
 
 
+
+
+
+
 .tabgroup{
   background-color: #C0C9E6;
 
   font-family: 'Open Sans', sans-serif;
 }
-

@@ -1,18 +1,15 @@
-<div class="top-bar">
-  <div class="startsection">
-    <button mat-icon-button (click)="onIconCLick()">
-      <mat-icon>arrow_back_ios</mat-icon>
-    </button>
+<mat-toolbar class="the-toolbar">
+  <div class="toolbar-left">
+    <mat-icon class="back-icon" aria-hidden="false" aria-label="Back Icon" (click)="onIconCLick()">arrow_back_ios</mat-icon>
     <span>Información de ABC-123</span>
   </div>
 
+  <div class="toolbar-middle-space"></div>
 
-  <div class="endsection">
-    <button mat-icon-button>
-      <mat-icon>account_circle</mat-icon>
-    </button>
-  </div>
-</div>
+  <div class="toolbar-right">
+    <img class="account-shortcut" ngSrc="./assets/account-icon.png" alt="account-icon" height="50" width="50"></div>
+</mat-toolbar>
+
 <section class="content">
   <div class="bck1">
 
@@ -55,8 +52,20 @@
             <img class="maps" src="assets/maps.png" alt="Maps">
           </div>
 
+          <div class="phone">
+            <button mat-icon-button class="buttonphone">
+              <img class="phoneimage" src="assets/assistance_button.png" alt="Phone">
+            </button>
+
+          </div>
+
+
+
+
         </mat-card-content>
       </mat-card>
+
+
 
 
 
@@ -72,14 +81,11 @@
         </mat-list>
       </mat-tab>
       <mat-tab label="Estado del dispositivo" class="tab1">Content 2</mat-tab>
-      <mat-tab label="Amigos" class="tab1">Content 3</mat-tab>
+      <mat-tab label="Compartir" class="tab1">Content 3</mat-tab>
 
     </mat-tab-group>
 
-    <div class="iconmap">
-      <img class="iconmap" src="assets/mapicon.png" alt="Icon Map">
-      <button mat-stroked-button color="black" class="buttonsatelite">Compartir Ubicacion</button>
-    </div>
+
 
   </div>
 
@@ -89,4 +95,5 @@
 
 
 </section>
+
 
