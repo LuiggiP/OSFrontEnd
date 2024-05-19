@@ -1,0 +1,16 @@
+<mat-toolbar class="the-toolbar">
+  <div class="toolbar-left">
+    <img class="securcar-logo" ngSrc="./assets/logos/securcar-logo.png" alt="Securcar" height="65" width="65">
+    <div>SecurCar</div>
+    <div class="toolbar-middle-space">
+      <img class="mail-shortcut" ngSrc="../../../../../../assets/material-icons/search-icon.png" alt="account-icon" height="30" width="30">
+      <input type="text" placeholder="Buscar un vehiculo">
+    </div>
+  </div>
+
+  <div class="toolbar-right">
+    <img class="mail-shortcut" ngSrc="../../../../../../assets/material-icons/mail-icon.png" alt="account-icon" height="50" width="50">
+    <img class="account-shortcut" ngSrc="./assets/material-icons/account-icon.png" alt="account-icon" height="50" width="50">
+    <img class="logout-shortcut" ngSrc="../../../../../../assets/material-icons/logout-icon.png" alt="account-icon" height="50" width="50" (click)="logout()">
+  </div>
+</mat-toolbar>

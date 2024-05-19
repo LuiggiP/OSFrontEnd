@@ -1,0 +1,48 @@
+
+
+<div class="holder">
+
+  <mat-toolbar class="the-toolbar">
+    <div class="toolbar-left">
+      <mat-icon class="back-icon" aria-hidden="false" aria-label="Back Icon" (click)="onIconCLick()">arrow_back_ios</mat-icon>
+      <span>Información de ‘xxxxxxxxx’</span>
+    </div>
+
+    <div class="toolbar-middle-space"></div>
+
+    <div class="toolbar-right">
+      <img class="account-shortcut" ngSrc="../../../../../assets/material-icons/account-icon.png" alt="account-icon" height="50" width="50"></div>
+  </mat-toolbar>
+  <div class="content-section space">
+    <div class="device-information-section">
+      <img class="device-image"
+           ngSrc="./assets/shared/examples/devices/device-1.png"
+           alt="Device Image"
+           height="250" width="250"
+      >
+
+      <div class="device-information-wrapper">
+        <div class="wrapper">
+          <detail-label label="Nombre" information="Mi GPS" [outlineWidth]=$any(2)></detail-label>
+          <detail-label label="ID" information="123456789ABCDEF" [outlineWidth]=$any(2)></detail-label>
+          <detail-label label="Estado" information="Activo"></detail-label>
+        </div>
+      </div>
+
+      <div class="share-section">
+        <img class="share-icon"
+             ngSrc="../../../../../assets/material-icons/share-icon.png"
+             height="45" width="45"
+             alt="Share">
+        <button class="share-button" mat-stroked-button>Compartir ubicación</button>
+      </div>
+    </div>
+    <div class="map-section">
+      <img class="map-image"
+           ngSrc="../../../../../assets/shared/examples/maps/map-1.png"
+           alt="Map Image"
+           height="557" width="909">
+    </div>
+  </div>
+
+</div>
