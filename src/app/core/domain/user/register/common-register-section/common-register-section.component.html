@@ -17,19 +17,19 @@
   <div class="formulario">
 
     <form>
-      <label>Usuario</label>
+      <label>Nombre Completo</label>
       <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
         <input matInput placeholder="Ingresa tu nombre">
+      </mat-form-field>
+
+      <label>DNI</label>
+      <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
+        <input matInput placeholder="Ingresa tu DNI">
       </mat-form-field>
 
       <label>Correo</label>
       <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
         <input matInput placeholder="pat@example.com">
-      </mat-form-field>
-
-      <label>Celular</label>
-      <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
-        <input matInput placeholder="123-456-789" >
       </mat-form-field>
 
       <label>Contraseña</label>
@@ -39,6 +39,20 @@
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
+      </mat-form-field>
+
+      <label>Fecha de Nacimiento</label>
+      <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
+        <input matInput [matDatepicker]="picker">
+        <mat-hint >MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+
+      <label>Celular</label>
+      <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
+        <input matInput placeholder="123-456-789" >
       </mat-form-field>
 
     </form>
