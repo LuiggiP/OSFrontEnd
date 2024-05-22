@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
-import {VehicleInformationComponent} from "../core/domain/components/vehicle-information/vehicle-information.component";
-import {CommonRegisterSectionComponent} from "../core/domain/components/common-register-section/common-register-section.component";
+import {VehicleInformationComponent} from "../core/domain/vehicle/vehicle/vehicle-information/vehicle-information.component";
+import {CommonRegisterSectionComponent} from "../core/domain/user/register/common-register-section/common-register-section.component";
 import {LoginSectionComponent} from "../core/domain/components/login-section/login-section.component";
-import {TheStartComponent} from "../core/public/components/start-page/the-start.component";
+import {TheStartComponent} from "../core/shared/start/start-page/the-start.component";
 import {ProfileSectionComponent} from "../core/public/components/profile-section/profile-section.component";
-import {DeviceInformationComponent} from "../core/public/components/device-information/device-information.component";
-import {VehicleTrackingComponent} from "../core/domain/components/vehicle-tracking/vehicle-tracking.component";
-import {TaxiDriverRegisterComponent} from "../core/domain/components/taxiDriver-register-section/taxiDriver-register-section";
+import {DeviceInformationComponent} from "../core/domain/device/device-information/device-information.component";
+import {VehicleTrackingComponent} from "../core/domain/vehicle/tracking/vehicle-tracking/vehicle-tracking.component";
+import {TaxiDriverRegisterComponent} from "../core/domain/user/register/taxiDriver-register-section/taxiDriver-register-section";
 
 
 
