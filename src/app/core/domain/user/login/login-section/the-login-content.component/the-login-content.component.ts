@@ -23,6 +23,8 @@ import {Router} from "@angular/router";
   styleUrl: './the-login-content.component.css'
 })
 export class LoginContentComponentComponent {
+
+
   // constructor(private router: Router) ,
   constructor(private _snackBar: MatSnackBar, private router: Router) { }
 
@@ -36,15 +38,17 @@ export class LoginContentComponentComponent {
     if (!user || !password) {
       this.openSnackBar('Error', 'Por favor, complete todos los campos');
     } else if(user && password) {
-      if((!hasUpperCase || !hasLowerCase) && !User_has_MinimumLength){
-        this.openSnackBar('Error', 'El usuario debe contener mayúsculas y minúsculas');
-      } if(!User_has_MinimumLength) {
-        this.openSnackBar('Error', 'El usuario debe  debe tener al menos 6 caracteres');
-      } else if(!Password_has_MinimumLength){
-        this.openSnackBar('Error', 'La contraseña debe tener al menos 6 caracteres');}
-      else {
-        this.openSnackBar(user, password);
-      }
+          if(!hasUpperCase || !hasLowerCase ){
+            this.openSnackBar('Error', 'El usuario debe contener mayúsculas y minúsculas');
+          }else  if(!User_has_MinimumLength) {
+            this.openSnackBar('Error', 'El usuario debe  debe tener al menos 6 caracteres');
+          } else if(!Password_has_MinimumLength){
+            this.openSnackBar('Error', 'La contraseña debe tener al menos 6 caracteres');
+          } else if( !User_has_MinimumLength  && !Password_has_MinimumLength ) {
+            this.openSnackBar('Error', 'El usuario y la contraseña deben tener al menos 6 caracteres');
+          }else {
+            this.openSnackBar('Logeado Con Exito', ' Bienvenido a la aplicación');
+          }
     } else {
       this.router.navigate(['/main-screen']);
     }
@@ -56,5 +60,12 @@ export class LoginContentComponentComponent {
 
   openSnackBar(user: string, password: string) {
     this._snackBar.open(user, password);
+  }
+
+  onChangePasswordClick() {
+    const newPassword = window.prompt('Por favor, ingresa tu nueva contraseña');
+    if (newPassword) {
+      this.openSnackBar('Contraseña Cambiada', 'Cerrar');
+    }
   }
 }
