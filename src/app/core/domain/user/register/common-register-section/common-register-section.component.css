@@ -27,11 +27,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 .content{
   width: 550px;
   text-align: center;
   margin-bottom: 10px;
+}
+.toggle-group {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 mat-card:hover{
   cursor: pointer;
