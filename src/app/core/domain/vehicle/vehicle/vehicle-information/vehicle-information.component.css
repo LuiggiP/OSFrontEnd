@@ -222,28 +222,34 @@ span{
   border: none;
   grid-column: 1;
 }
-
-.phone{
-  grid-column: 1;
+.buttons-section{
   display: flex;
-
-
-
-
-
+  text-align: center;
 
 }
+.phone{
+  grid-column: 1;
+  display: grid;
+}
 
-.buttonphone{
+.delete-button {
+  color: red;
+  border: solid 1px;
+  border-radius: 50%;
+  border-color: red;
+  margin-top: 1vh;
+  width: 80px;
+  height: 70px;
+  margin-left: 10px;
+}
+
+.button-phone{
   border: solid 1px;
   border-radius: 50%;
   border-color: #898989;
   margin-top: 1vh;
   width: 80px;
   height: 70px;
-
-
-
 }
 
 .sateliteimage {
