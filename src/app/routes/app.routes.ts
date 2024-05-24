@@ -6,7 +6,6 @@ import {TheStartComponent} from "../core/shared/start/start-page/the-start.compo
 import {ProfileSectionComponent} from "../core/domain/user/profile/profile-section/profile-section.component";
 import {DeviceInformationComponent} from "../core/domain/device/device-information/device-information.component";
 import {VehicleTrackingComponent} from "../core/domain/vehicle/tracking/vehicle-tracking/vehicle-tracking.component";
-import {TaxiDriverRegisterComponent} from "../core/domain/user/register/taxiDriver-register-section/taxiDriver-register-section";
 
 
 
@@ -19,9 +18,6 @@ export const routes: Routes = [
   },
   {
     path: 'common-register', component: CommonRegisterSectionComponent
-  },
-  {
-    path: 'taxi-driver-register', component: TaxiDriverRegisterComponent
   },
   {
     path: 'start', component: TheStartComponent

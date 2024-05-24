@@ -17,6 +17,13 @@
   <div class="formulario">
 
     <form>
+
+      <label>Registrarse como:</label>
+      <mat-button-toggle-group class="toggle-group" name="userType" aria-label="User Type" (change)="onUserTypeChange($event)">
+        <mat-button-toggle value="user">Usuario</mat-button-toggle>
+        <mat-button-toggle value="taxiDriver">Taxista</mat-button-toggle>
+      </mat-button-toggle-group>
+
       <label>Nombre Completo</label>
       <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
         <input matInput placeholder="Ingresa tu nombre">
@@ -53,6 +60,16 @@
       <label>Celular</label>
       <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
         <input matInput placeholder="123-456-789" >
+      </mat-form-field>
+
+      <label *ngIf="isTaxiDriver">Empresa Afiliada</label>
+      <mat-form-field *ngIf="isTaxiDriver" style="height: 70px; width: 400px; margin-top: 5px;">
+        <mat-select>
+          <mat-option value="one">Uber</mat-option>
+          <mat-option value="two">Indriver</mat-option>
+          <mat-option value="three">Didi</mat-option>
+          <mat-option value="four">Cabify</mat-option>
+        </mat-select>
       </mat-form-field>
 
     </form>
