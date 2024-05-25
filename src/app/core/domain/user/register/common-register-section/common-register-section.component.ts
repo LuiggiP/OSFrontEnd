@@ -9,31 +9,34 @@ import {MatDatepicker, MatDatepickerInput, MatDatepickerToggle} from "@angular/m
 import {MatOption, provideNativeDateAdapter} from "@angular/material/core";
 import {MatSelect} from "@angular/material/select";
 import {MatButtonToggle, MatButtonToggleChange, MatButtonToggleGroup} from "@angular/material/button-toggle";
-import {NgIf} from "@angular/common";
+import {NgIf, NgOptimizedImage} from "@angular/common";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {MatToolbar} from "@angular/material/toolbar";
 
 @Component({
   selector: 'app-common-register-section',
   standalone: true,
-  imports: [
-    MatIconButton,
-    MatIcon,
-    MatCard,
-    MatCardContent,
-    MatFormFieldModule,
-    MatInput,
-    MatButton,
-    MatDatepicker,
-    MatDatepickerToggle,
-    MatDatepickerInput,
-    MatHint,
-    MatOption,
-    MatSelect,
-    MatButtonToggleGroup,
-    MatButtonToggle,
+    imports: [
+        MatIconButton,
+        MatIcon,
+        MatCard,
+        MatCardContent,
+        MatFormFieldModule,
+        MatInput,
+        MatButton,
+        MatDatepicker,
+        MatDatepickerToggle,
+        MatDatepickerInput,
+        MatHint,
+        MatOption,
+        MatSelect,
+        MatButtonToggleGroup,
+        MatButtonToggle,
 
-    NgIf
-  ],
+        NgIf,
+        MatToolbar,
+        NgOptimizedImage
+    ],
   providers: [provideNativeDateAdapter()],
   templateUrl: './common-register-section.component.html',
   styleUrl: './common-register-section.component.css'
