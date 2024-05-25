@@ -8,6 +8,10 @@
   height: 7rem;
 }
 
+.tabgroup {
+  background-color: transparent;
+
+}
 .toolbar-left {
   display: flex;
   align-items: center;
