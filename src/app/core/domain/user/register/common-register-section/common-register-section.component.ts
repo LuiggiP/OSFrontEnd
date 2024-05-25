@@ -16,27 +16,27 @@ import {MatToolbar} from "@angular/material/toolbar";
 @Component({
   selector: 'app-common-register-section',
   standalone: true,
-    imports: [
-        MatIconButton,
-        MatIcon,
-        MatCard,
-        MatCardContent,
-        MatFormFieldModule,
-        MatInput,
-        MatButton,
-        MatDatepicker,
-        MatDatepickerToggle,
-        MatDatepickerInput,
-        MatHint,
-        MatOption,
-        MatSelect,
-        MatButtonToggleGroup,
-        MatButtonToggle,
+  imports: [
+    MatIconButton,
+    MatIcon,
+    MatCard,
+    MatCardContent,
+    MatFormFieldModule,
+    MatInput,
+    MatButton,
+    MatDatepicker,
+    MatDatepickerToggle,
+    MatDatepickerInput,
+    MatHint,
+    MatOption,
+    MatSelect,
+    MatButtonToggleGroup,
+    MatButtonToggle,
 
-        NgIf,
-        MatToolbar,
-        NgOptimizedImage
-    ],
+    NgIf,
+    MatToolbar,
+    NgOptimizedImage
+  ],
   providers: [provideNativeDateAdapter()],
   templateUrl: './common-register-section.component.html',
   styleUrl: './common-register-section.component.css'
@@ -62,4 +62,3 @@ export class CommonRegisterSectionComponent {
 
 
 }
-

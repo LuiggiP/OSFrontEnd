@@ -1,45 +1,54 @@
-<div class="top-bar">
-  <button mat-icon-button (click)="onIconClick()">
-    <mat-icon>arrow_back_ios</mat-icon>
-  </button>
-  <span>Register</span>
-</div>
+<mat-toolbar class="top-bar">
+  <div class="toolbar-left">
+    <mat-icon class="back-icon" aria-hidden="false" aria-label="Back Icon" (click)="onIconClick()">arrow_back_ios</mat-icon>
+    <span>Registrar</span>
+  </div>
 
-<div  class="cuerpo">
+  <div class="toolbar-middle-space"></div>
+
+  <div class="toolbar-right">
+
+  </div>
+</mat-toolbar>
+
+<div class="section-body">
   <div class="container">
     <div class="content">
-      <mat-card>
-        <mat-card-content>"Completa la información a continuación <br> para crear tu nueva cuenta "</mat-card-content>
+      <mat-card class="information-card">
+        <mat-card-content>Completa la siguiente información para crear un cuenta nueva. Tu información personal no será compartida con nadie. Para más información sobre nuestros términos y condiciones, haga clic en este banner.</mat-card-content>
       </mat-card>
     </div>
   </div>
 
-  <div class="formulario">
-
+  <div class="form-section">
     <form>
+      <div style="gap: 1.5rem; display: flex; align-content: center; justify-content: center; align-items: center;">
+        <label class="label-text">Registrarse como</label>
+        <div>
+          <mat-button-toggle-group class="toggle-group" name="userType" aria-label="User Type" (change)="onUserTypeChange($event)">
+            <mat-button-toggle value="user">Usuario</mat-button-toggle>
+            <mat-button-toggle value="taxiDriver">Taxista</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </div>
 
-      <label>Registrarse como:</label>
-      <mat-button-toggle-group class="toggle-group" name="userType" aria-label="User Type" (change)="onUserTypeChange($event)">
-        <mat-button-toggle value="user">Usuario</mat-button-toggle>
-        <mat-button-toggle value="taxiDriver">Taxista</mat-button-toggle>
-      </mat-button-toggle-group>
 
-      <label>Nombre Completo</label>
+      <label class="label-text">Nombre Completo</label>
       <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
         <input matInput placeholder="Ingresa tu nombre">
       </mat-form-field>
 
-      <label>DNI</label>
+      <label class="label-text">DNI</label>
       <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
         <input matInput placeholder="Ingresa tu DNI">
       </mat-form-field>
 
-      <label>Correo</label>
+      <label class="label-text">Correo</label>
       <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
         <input matInput placeholder="pat@example.com">
       </mat-form-field>
 
-      <label>Contraseña</label>
+      <label class="label-text">Contraseña</label>
       <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
 
         <input matInput [type]="hide ? 'password' : 'text'" placeholder="SecretPassword">
@@ -48,21 +57,20 @@
         </button>
       </mat-form-field>
 
-      <label>Fecha de Nacimiento</label>
+      <label class="label-text">Fecha de Nacimiento</label>
       <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
         <input matInput [matDatepicker]="picker">
-        <mat-hint >MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
 
 
-      <label>Celular</label>
+      <label class="label-text">Celular</label>
       <mat-form-field style="height: 70px; width: 400px; margin-top: 5px;">
         <input matInput placeholder="123-456-789" >
       </mat-form-field>
 
-      <label *ngIf="isTaxiDriver">Empresa Afiliada</label>
+      <label *ngIf="isTaxiDriver" class="label-text">Empresa Afiliada</label>
       <mat-form-field *ngIf="isTaxiDriver" style="height: 70px; width: 400px; margin-top: 5px;">
         <mat-select>
           <mat-option value="one">Uber</mat-option>
@@ -74,21 +82,30 @@
 
     </form>
 
-    <button mat-flat-button class="button_register">Register</button>
+    <button mat-stroked-button (click)="openSnackBar()" class="button_register">Register</button>
+
+
     <div class="social">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSN-bxM4DCu48dtfvCOoOivY2WdrDBZfagGKXfo1Xf3g&s"width="80px" height="80px" >
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/2048px-Facebook_icon.svg.png" width="80px" height="80px">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjGVLIp02foY_-zP_i3LjkNDI8CC1EnQdB0qpjRpIQ9w&s" width="80px" height="80px">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" width="80px" height="80px">
+      <a href="https://mail.google.com">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSN-bxM4DCu48dtfvCOoOivY2WdrDBZfagGKXfo1Xf3g&s" width="80px" height="80px" >
+      </a>
+      <a href="https://facebook.com">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/2048px-Facebook_icon.svg.png" width="80px" height="80px">
+      </a>
+      <a href="https://apple.com">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjGVLIp02foY_-zP_i3LjkNDI8CC1EnQdB0qpjRpIQ9w&s" width="80px" height="80px">
+      </a>
+      <a href="https://instagram.com">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" width="80px" height="80px">
+      </a>
     </div>
 
-    <div class="footer">
-      <a href="mailto:securcar@gmail.com">
-        <button mat-icon-button>
-          <mat-icon>mail</mat-icon>
-        </button>
-      </a>
-      <span>Contáctanos</span>
-    </div>
+
+    <a href="mailto:securcar@gmail.com">
+      <div class="contact-us">
+        <img class="mail-icon" ngSrc="assets/material-icons/mail-icon.png" alt="Mail Icon" height="40" width="40">
+        <span>Contáctanos</span>
+      </div>
+    </a>
   </div>
 </div>
