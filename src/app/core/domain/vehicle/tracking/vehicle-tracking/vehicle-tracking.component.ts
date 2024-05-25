@@ -6,6 +6,8 @@ import {MatButton} from "@angular/material/button";
 import {NgOptimizedImage} from "@angular/common";
 import { MatIconModule } from '@angular/material/icon';
 import {Router} from "@angular/router";
+import {MatTab, MatTabGroup} from "@angular/material/tabs";
+import {MatList, MatListItem} from "@angular/material/list";
 
 @Component({
   selector: 'app-vehicle-tracking',
@@ -16,7 +18,11 @@ import {Router} from "@angular/router";
     MatIcon,
     DetailLabelComponent,
     MatButton,
-    NgOptimizedImage
+    NgOptimizedImage,
+    MatTabGroup,
+    MatTab,
+    MatList,
+    MatListItem
   ],
   templateUrl: './vehicle-tracking.component.html',
   styleUrl: './vehicle-tracking.component.css'
