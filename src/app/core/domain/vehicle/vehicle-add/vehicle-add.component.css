@@ -1,0 +1,125 @@
+.all-wrapper {
+  font-family: "Product Sans", sans-serif;
+}
+
+/*Toolbar*/
+span{
+  color: white;
+  font-size: 30px;
+  padding-right: 10px;
+}
+
+.back-icon {
+  color: white;
+  transform: scale(1.6);
+  transition: background-color 150ms ease;
+  border-radius: 2rem;
+  padding: 0.4rem;
+}
+.back-icon:hover {
+  cursor: pointer;
+  background-color: #80A0FF;
+}
+.account-shortcut {
+  transition: background-color 150ms ease;
+  border-radius: 2.5rem;
+  padding: 0.35rem;
+}
+.account-shortcut:hover {
+  cursor: pointer;
+  background-color: #80A0FF;
+}
+
+.the-toolbar {
+  background-color: #446DFF;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Product Sans", sans-serif;
+  color: white;
+  height: 5rem;
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-left: 1rem;
+
+  font-size: 1.75rem;
+}
+.toolbar-middle-space {
+  flex: 1 1 auto;
+}
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-right: 1rem;
+}
+
+/*============================================*/
+
+/*Container*/
+.container{
+  background-color: #ffffff;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    font-family: "Product Sans", sans-serif;
+}
+.content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.information-card {
+  width: 400px;
+  text-align: center;
+}
+/*=========================*/
+
+/*Form-section*/
+.form-section {
+  width: 100%;
+  max-width: 400px;
+}
+.label-text {
+  font-weight: bold;
+  margin-top: 15px;
+  display: block;
+}
+.mat-form-field {
+  width: 100%;
+}
+
+.button-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button_add {
+  width: 45%;
+}
+
+.button_cancel {
+  width: 45%;
+}
+
+
+
+
+
+
+
+
+
+
+
