@@ -8,11 +8,12 @@ import {VehicleTrackingComponent} from "./domain/vehicle/tracking/vehicle-tracki
 import {ProfileSectionComponent} from "./domain/user/profile/profile-section/profile-section.component";
 import {TheStartComponent} from "./shared/start/start-page/the-start.component";
 import {DebugToolbarComponent} from "./test/components/debug-toolbar/debug-toolbar.component";
+import {VehicleAddComponent} from "./domain/vehicle/vehicle/vehicle-add/vehicle-add.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, DeviceInformationComponent, LoginSectionComponent, CommonRegisterSectionComponent, VehicleInformationComponent, VehicleTrackingComponent, ProfileSectionComponent, TheStartComponent, DebugToolbarComponent],
+  imports: [RouterOutlet, RouterLink, DeviceInformationComponent, LoginSectionComponent, CommonRegisterSectionComponent, VehicleInformationComponent, VehicleTrackingComponent, ProfileSectionComponent, TheStartComponent, DebugToolbarComponent, VehicleAddComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

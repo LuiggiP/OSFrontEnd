@@ -6,7 +6,7 @@ import {TheStartComponent} from "../core/shared/start/start-page/the-start.compo
 import {ProfileSectionComponent} from "../core/domain/user/profile/profile-section/profile-section.component";
 import {DeviceInformationComponent} from "../core/domain/device/device-information/device-information.component";
 import {VehicleTrackingComponent} from "../core/domain/vehicle/tracking/vehicle-tracking/vehicle-tracking.component";
-
+import {VehicleAddComponent} from "../core/domain/vehicle/vehicle/vehicle-add/vehicle-add.component";
 
 
 export const routes: Routes = [
@@ -33,5 +33,8 @@ export const routes: Routes = [
   },
   {
     path: 'vehicle-tracking', component: VehicleTrackingComponent
+  },
+  {
+    path: 'vehicle-add', component: VehicleAddComponent
   }
 ];
