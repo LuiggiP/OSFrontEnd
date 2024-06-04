@@ -1,8 +1,8 @@
 <div class="container">
   <img src="../../../../../../assets/shared/examples/maps/map-1.png" height="280px" width="100%">
   <div class="mid-bar">
-    <button>Vehiculos</button>
-    <button>Dispositivos</button>
+    <button (click)="ShowVehicleInfo()">Vehiculos</button>
+    <button (click)="ShowDeviceInfo()">Dispositivos</button>
   </div>
   <div class="footer">
   <div class="left_side">
@@ -19,7 +19,9 @@
         </div>
       </mat-card-content>
     </mat-card>
+    <button style="background-color: white; border: none; cursor:pointer;"  (click)="AddVehicle()">
     <img src="../../../../../../assets/material-icons/add-icon.png" width="40px" height="40px" >
+    </button>
   </div>
 
     <div class="right_side">

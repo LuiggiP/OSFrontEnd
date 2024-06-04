@@ -2,14 +2,16 @@
 
   <mat-toolbar class="the-toolbar">
     <div class="toolbar-left">
-      <mat-icon class="back-icon" aria-hidden="false" aria-label="Back Icon" (click)="onIconCLick()">arrow_back_ios</mat-icon>
+      <mat-icon class="back-icon" aria-hidden="false" aria-label="Back Icon" (click)="ReturnHome()">arrow_back_ios</mat-icon>
       <span>Rastreo y Ubicación</span>
     </div>
 
     <div class="toolbar-middle-space"></div>
 
     <div class="toolbar-right">
+      <button style="background-color: #446DFF ; border: none" (click)="SeeProfile()" >
       <img class="account-shortcut" src="../../../../../../assets/material-icons/account-icon.png" alt="account-icon" height="50" width="50">
+      </button>
     </div>
   </mat-toolbar>
 
@@ -21,10 +23,10 @@
            height="250" width="250">
 
       <div class="device-information-wrapper">
-        <div class="wrapper">
-          <detail-label label="Nombre" information="Carro" [outlineWidth]="2"></detail-label>
-          <detail-label label="Placa" information="ABC-123" [outlineWidth]="2"></detail-label>
-          <detail-label label="Estado" information="Seguro"><span class="status-indicator"></span> </detail-label>
+        <div class="wrapper" *ngFor="let tracking of trackings">
+          <detail-label label="Nombre" information="{{tracking.Name}}" [outlineWidth]="2"></detail-label>
+          <detail-label label="Placa" information="{{tracking.Plate}}" [outlineWidth]="2"></detail-label>
+          <detail-label label="Estado" information="{{tracking.Condition}}"><span class="status-indicator"></span> </detail-label>
 
         </div>
       </div>

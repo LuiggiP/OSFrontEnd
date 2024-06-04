@@ -1,17 +1,20 @@
 
 
-<div class="holder">
+<div class="holder" *ngFor="let device of devices" >
 
   <mat-toolbar class="the-toolbar">
     <div class="toolbar-left">
-      <mat-icon class="back-icon" aria-hidden="false" aria-label="Back Icon" (click)="onIconCLick()">arrow_back_ios</mat-icon>
-      <span>Información de ‘xxxxxxxxx’</span>
+      <mat-icon class="back-icon" aria-hidden="false" aria-label="Back Icon" (click)="ReturnHome()">arrow_back_ios</mat-icon>
+      <span>Información de {{device.Name}}</span>
     </div>
 
     <div class="toolbar-middle-space"></div>
 
-    <div class="toolbar-right">
-      <img class="account-shortcut" ngSrc="../../../../../assets/material-icons/account-icon.png" alt="account-icon" height="50" width="50"></div>
+    <div class="toolbar-right" >
+      <button style="background-color: #446DFF ; border: none" (click)="SeeProfile()" >
+      <img class="account-shortcut" ngSrc="../../../../../assets/material-icons/account-icon.png" alt="account-icon" height="50" width="50" >
+      </button>
+    </div>
   </mat-toolbar>
   <div class="content-section space">
     <div class="device-information-section">
@@ -23,9 +26,9 @@
 
       <div class="device-information-wrapper">
         <div class="wrapper">
-          <detail-label label="Nombre" information="Mi GPS" [outlineWidth]=$any(2)></detail-label>
-          <detail-label label="ID" information="123456789ABCDEF" [outlineWidth]=$any(2)></detail-label>
-          <detail-label label="Estado" information="Activo"></detail-label>
+          <detail-label label="Nombre" information="{{device.Name}}" [outlineWidth]=$any(2)></detail-label>
+          <detail-label label="ID" information="{{device.Id}}" [outlineWidth]=$any(2)></detail-label>
+          <detail-label label="Estado" information="{{device.Condition}}"></detail-label>
         </div>
       </div>
 

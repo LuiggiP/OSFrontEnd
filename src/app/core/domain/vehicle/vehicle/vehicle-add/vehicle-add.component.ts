@@ -41,4 +41,11 @@ export class VehicleAddComponent {
     this.router.navigate(['/vehicle-information']);
   }
 
+
+  ReturnHome() {
+    this.router.navigate(['/start']);
+  }
+  SeeProfile() {
+    this.router.navigate(['/profile']);
+  }
 }

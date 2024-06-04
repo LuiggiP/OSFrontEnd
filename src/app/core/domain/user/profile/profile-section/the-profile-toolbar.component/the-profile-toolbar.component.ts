@@ -20,7 +20,7 @@ export class TheProfileToolbarComponent {
   logout() {
     this.router.navigate(['/login']);
   }
-  onIconCLick() {
-    this.router.navigate(['/main-screen']);
+  ReturnHome() {
+    this.router.navigate(['/start']);
   }
 }

@@ -2,14 +2,17 @@
 
   <mat-toolbar class="the-toolbar">
     <div class="toolbar-left">
-      <mat-icon class="back-icon" aria-hidden="false" aria-label="Back Icon" (click)="onIconCLick()">arrow_back_ios</mat-icon>
+      <mat-icon class="back-icon" aria-hidden="false" aria-label="Back Icon" (click)="ReturnHome()">arrow_back_ios</mat-icon>
       <span>Agregar vehiculo</span>
     </div>
 
     <div class="toolbar-middle-space"></div>
 
     <div class="toolbar-right">
-      <img class="account-shortcut" ngSrc="../../../../../../assets/material-icons/account-icon.png" alt="account-icon" height="50" width="50"></div>
+      <button style="background-color: #446DFF ; border: none" (click)="SeeProfile()" >
+      <img class="account-shortcut" ngSrc="../../../../../../assets/material-icons/account-icon.png" alt="account-icon" height="50" width="50">
+      </button>
+    </div>
   </mat-toolbar>
 
   <div class="container">
@@ -57,7 +60,7 @@
 
       <div class="button-section">
         <button mat-raised-button class="button_add" color="primary" (click)="onAddVehicleClick()">Agregar</button>
-        <button mat-raised-button class="button_cancel" color="warn" (click)="onIconCLick()">Cancelar</button>
+        <button mat-raised-button class="button_cancel" color="warn" (click)="ReturnHome()">Cancelar</button>
       </div>
     </div>
   </div>

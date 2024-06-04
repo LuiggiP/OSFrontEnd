@@ -20,4 +20,7 @@ export class ToolbarComponent {
   logout() {
     this.router.navigate(['/login']);
   }
+  profile() {
+    this.router.navigate(['/profile']);
+  }
 }

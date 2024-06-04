@@ -45,8 +45,26 @@ export class CommonRegisterSectionComponent {
   hide = true
   constructor(private router: Router, private _snackBar: MatSnackBar) {
   }
+
+  onLoginClick( name: string, dni: string, email: string,   password: string, date:string, cellphone:string) {
+
+
+    if (!name  || !dni || !email  || !password || !date || !cellphone) {
+      this.openSnackBar('Error', 'Por favor, complete todos los campos');
+    } else if(name && password && dni && email && date && cellphone) {
+        this.openSnackBar('Registro Con Exito', ' Bienvenido a la aplicación');
+        this.onIconClick();
+    }
+  }
+
+
+  openSnackBar(user: string, password: string) {
+    this._snackBar.open(user, password);
+
+  }
+
   onIconClick() {
-    this.router.navigate(['/login'])
+    this.router.navigate(['/start'])
   }
 
   isTaxiDriver = false;
@@ -54,11 +72,5 @@ export class CommonRegisterSectionComponent {
   onUserTypeChange(event: MatButtonToggleChange) {
     this.isTaxiDriver = event.value === 'taxiDriver';
   }
-
-
-  openSnackBar() {
-    this._snackBar.open('Registrado con éxito');
-  }
-
 
 }
