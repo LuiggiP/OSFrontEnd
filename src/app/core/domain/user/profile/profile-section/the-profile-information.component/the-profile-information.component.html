@@ -1,19 +1,19 @@
   <div class="main-holder">
-    <div *ngFor="let profile of profiles">
+    <div *ngIf="profile">
     <div class="actual-container">
       <div class="hello-user">
         <img class="user-profile-photo" ngSrc="../../../../../../assets/shared/examples/users/person-in-a-car.png" alt="user-photo" height="250" width="250">
-        <div>Bienvenido, {{profile.Name}}</div>
+        <div>Bienvenido, {{profile.fullName}}</div>
       </div>
       <div class="user-information-wrapper">
         <p style="font-size: 1.5rem">Información básica</p>
 
         <div class="wrapper">
-          <detail-label label="Nombre" information="{{profile.Name}}" [outlineWidth]=$any(2)></detail-label>
-          <detail-label label="DNI" information="{{profile.Dni}}" [outlineWidth]=$any(2)></detail-label>
-          <detail-label label="Correo" information="{{profile.Email}}" [outlineWidth]=$any(2)></detail-label>
-          <detail-label label="Fecha de nacimiento" information="{{profile.Birth_Day}}" [outlineWidth]=$any(2)></detail-label>
-          <detail-label label="Celular" information="{{profile.Cellphone_number}}"></detail-label>
+          <detail-label label="Nombre" information="{{profile.fullName}}" [outlineWidth]=$any(2)></detail-label>
+          <detail-label label="DNI" information="{{profile.dni}}" [outlineWidth]=$any(2)></detail-label>
+          <detail-label label="Correo" information="{{profile.email}}" [outlineWidth]=$any(2)></detail-label>
+          <detail-label label="Fecha de nacimiento" information="{{profile.birthDate}}" [outlineWidth]=$any(2)></detail-label>
+          <detail-label label="Celular" information="{{profile.phone}}"></detail-label>
 
         </div>
 

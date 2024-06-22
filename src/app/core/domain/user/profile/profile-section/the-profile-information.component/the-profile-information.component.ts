@@ -3,6 +3,8 @@ import {DetailLabelComponentComponent} from "../detail-label.component/detail-la
 import {CommonModule} from "@angular/common";
 import {NgOptimizedImage} from "@angular/common";
 import {ApiService} from "../../../../../services/api-service";
+import {UserService} from "../../../../../services/user.service";
+
 
 @Component({
   selector: 'the-profile-information',
@@ -17,14 +19,17 @@ import {ApiService} from "../../../../../services/api-service";
 })
 
 export class TheProfileInformationComponent implements OnInit{
-  profiles: any[] = [];
+  profile: any = null;  // Cambiado de array a objeto
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, private userService: UserService) { }
 
   ngOnInit(): void {
-    this.apiService.getProfileData().subscribe((data: any) => {
-      this.profiles = [...data];
-    });
+    const userId = this.userService.getUserId();
+    if (userId) {
+      this.apiService.getProfileData(userId).subscribe((data: any) => {
+        this.profile = data;  // Asignar directamente el objeto
+      });
+    }
   }
 
 }
