@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {environment} from "../../../enviroments/enviroment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  private baseUrl = 'http://ec2-54-226-90-201.compute-1.amazonaws.com:8080/api/v1';
 
+  private baseUrl = environment.apiUrl;
   constructor(private http: HttpClient) { }
 
   signIn(username: string, password: string){
