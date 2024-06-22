@@ -23,10 +23,10 @@
            height="250" width="250">
 
       <div class="device-information-wrapper">
-        <div class="wrapper" *ngFor="let tracking of trackings">
-          <detail-label label="Nombre" information="{{tracking.Name}}" [outlineWidth]="2"></detail-label>
-          <detail-label label="Placa" information="{{tracking.Plate}}" [outlineWidth]="2"></detail-label>
-          <detail-label label="Estado" information="{{tracking.Condition}}"><span class="status-indicator"></span> </detail-label>
+        <div class="wrapper" *ngIf="tracking">
+          <detail-label label="Nombre" information="{{tracking.name}}" [outlineWidth]="2"></detail-label>
+          <detail-label label="Placa" information="{{tracking.licensePlate}}" [outlineWidth]="2"></detail-label>
+          <detail-label label="Estado" information="Safe"><span class="status-indicator"></span> </detail-label>
 
         </div>
       </div>

@@ -1,11 +1,11 @@
 
 
-<div class="holder" *ngFor="let device of devices" >
+<div class="holder" *ngIf="device" >
 
   <mat-toolbar class="the-toolbar">
     <div class="toolbar-left">
       <mat-icon class="back-icon" aria-hidden="false" aria-label="Back Icon" (click)="ReturnHome()">arrow_back_ios</mat-icon>
-      <span>Información de {{device.Name}}</span>
+      <span>Información de {{device.name}}</span>
     </div>
 
     <div class="toolbar-middle-space"></div>
@@ -26,9 +26,9 @@
 
       <div class="device-information-wrapper">
         <div class="wrapper">
-          <detail-label label="Nombre" information="{{device.Name}}" [outlineWidth]=$any(2)></detail-label>
-          <detail-label label="ID" information="{{device.Id}}" [outlineWidth]=$any(2)></detail-label>
-          <detail-label label="Estado" information="{{device.Condition}}"></detail-label>
+          <detail-label label="Nombre" information="{{device.name}}" [outlineWidth]=$any(2)></detail-label>
+          <detail-label label="ID" information="{{device.deviceId}}" [outlineWidth]=$any(2)></detail-label>
+          <detail-label label="Estado" information="{{device.status}}"></detail-label>
         </div>
       </div>
 

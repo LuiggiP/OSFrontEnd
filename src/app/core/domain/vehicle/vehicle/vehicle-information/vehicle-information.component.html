@@ -39,13 +39,13 @@
               </div>
 
 
-            <div *ngFor="let vehicle of vehicles">
+            <div *ngIf="vehicle">
               <div class="descriptioncontainer">
-                <p>{{vehicle.Name }}</p>
+                <p>{{vehicle.name }}</p>
                 <mat-divider></mat-divider>
-                <p>{{vehicle.Plate }}</p>
+                <p>{{vehicle.licensePlate }}</p>
                 <mat-divider></mat-divider>
-                <p>{{vehicle.Condition }}</p>
+                <p>Safe</p>
               </div>
             </div>
 

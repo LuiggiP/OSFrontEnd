@@ -28,6 +28,7 @@ export class TheProfileInformationComponent implements OnInit{
     if (userId) {
       this.apiService.getProfileData(userId).subscribe((data: any) => {
         this.profile = data;  // Asignar directamente el objeto
+        console.log('Profile data:', this.profile);
       });
     }
   }

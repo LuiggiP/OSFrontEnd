@@ -10,6 +10,7 @@ import {MatTab, MatTabGroup} from "@angular/material/tabs";
 import {MatList, MatListItem} from "@angular/material/list";
 import {CommonModule} from "@angular/common";
 import {ApiService} from "../../../../services/api-service";
+import {UserService} from "../../../../services/user.service";
 
 @Component({
   selector: 'app-vehicle-tracking',
@@ -31,16 +32,20 @@ import {ApiService} from "../../../../services/api-service";
   styleUrl: './vehicle-tracking.component.css'
 })
 export class VehicleTrackingComponent  implements OnInit{
-  trackings: any[] = [];
-  constructor(private router: Router, private apiService:ApiService) { }
+  tracking: any = null;
+  constructor(private router: Router, private apiService:ApiService, private userService: UserService) { }
 
   onIconCLick() {
     this.router.navigate(['/main-screen']);
   }
   ngOnInit(): void {
-    this.apiService.getVehicleData().subscribe((data: any) => {
-      this.trackings = [...data];
-    });
+    const userId = this.userService.getUserId();
+    if (userId) {
+      this.apiService.getVehicleData(userId).subscribe((data: any) => {
+        this.tracking = data;
+        console.log('Vehicle data:', this.tracking);
+      });
+    }
   }
 
   SeeProfile() {

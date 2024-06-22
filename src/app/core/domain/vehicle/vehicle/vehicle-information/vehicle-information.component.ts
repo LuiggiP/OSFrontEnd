@@ -9,9 +9,8 @@ import {MatDivider} from "@angular/material/divider";
 import {NgOptimizedImage} from "@angular/common";
 import {CommonModule} from "@angular/common";
 import {ApiService} from "../../../../services/api-service";
-
-
 import {Router} from "@angular/router";
+import {UserService} from "../../../../services/user.service";
 
 
 @Component({
@@ -37,15 +36,19 @@ import {Router} from "@angular/router";
   templateUrl: `./vehicle-information.component.html`,
   styleUrl: './vehicle-information.component.css'
 })
-export class VehicleInformationComponent {
-  vehicles: any[] = [];
-  constructor(private router: Router,private apiService:ApiService) { }
+export class VehicleInformationComponent implements OnInit{
+  vehicle: any = null;
+  constructor(private router: Router,private apiService:ApiService, private userService: UserService) { }
 
 
   ngOnInit(): void {
-    this.apiService.getVehicleData().subscribe((data: any) => {
-      this.vehicles = [...data];
-    });
+    const userId = this.userService.getUserId();
+    if (userId) {
+      this.apiService.getVehicleData(userId).subscribe((data: any) => {
+        this.vehicle = data;
+        console.log('Vehicle data:', this.vehicle);
+      });
+    }
   }
   SeeProfile() {
     this.router.navigate(['/profile']);

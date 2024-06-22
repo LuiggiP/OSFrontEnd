@@ -8,7 +8,7 @@ import {NgOptimizedImage} from "@angular/common";
 import {DetailLabelComponent} from "./detail-label.component/detail-label.component.component";
 import {CommonModule} from "@angular/common";
 import {ApiService} from "../../../services/api-service";
-
+import {UserService} from "../../../services/user.service";
 
 @Component({
   selector: 'DeviceInformationComponent',
@@ -30,17 +30,22 @@ import {ApiService} from "../../../services/api-service";
 })
 export class DeviceInformationComponent implements OnInit{
 
-  devices: any[] = [];
-  constructor(private router: Router, private apiService: ApiService) { }
+  device: any = null;
+  constructor(private router: Router, private apiService: ApiService, private userService: UserService) { }
 
   onIconCLick() {
     this.router.navigate(['/main-screen']);
   }
 
   ngOnInit(): void {
-    this.apiService.getDeviceData().subscribe((data: any) => {
-      this.devices = [...data];
-    });
+    const userId = this.userService.getUserId();
+    if (userId) {
+      this.apiService.getDeviceData(userId).subscribe((data: any) => {
+        this.device = data;
+        console.log('Device data:', this.device);
+      });
+    }
+
   }
 
   SeeProfile() {

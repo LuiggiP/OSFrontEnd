@@ -27,8 +27,13 @@ export class ApiService {
   }
 
   getVehicleData(id: string){
-    console.log('Making request to:', `${this.baseUrl}/vehicles/${id}`);
     return this.http.get<any>(`${this.baseUrl}/vehicles/${id}`);
+  }
+  createVehicle(vehicleData: any){
+    return this.http.post<any>(`${this.baseUrl}/vehicles`, vehicleData);
+  }
+  createProfile(profileData: any){
+    return this.http.post<any>(`${this.baseUrl}/profiles`, profileData);
   }
 }
 

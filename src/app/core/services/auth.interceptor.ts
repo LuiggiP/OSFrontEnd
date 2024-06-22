@@ -7,7 +7,7 @@ import { UserService } from './user.service';  // Asegúrate de ajustar la ruta 
 export class AuthInterceptor implements HttpInterceptor {
   constructor(private userService: UserService) {}
 
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  intercept(req: HttpRequest<any>, next: HttpHandler){
     // Exclude authentication requests
     if (req.url.includes('/authentication')) {
       return next.handle(req);
