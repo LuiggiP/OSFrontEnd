@@ -2,14 +2,17 @@
 
 <mat-toolbar class="the-toolbar">
   <div class="toolbar-left">
-    <mat-icon class="back-icon" aria-hidden="false" aria-label="Back Icon" (click)="onIconCLick()">arrow_back_ios</mat-icon>
+    <mat-icon class="back-icon" aria-hidden="false" aria-label="Back Icon" (click)="ReturnHome()">arrow_back_ios</mat-icon>
     <span>Información de ABC-123</span>
   </div>
 
   <div class="toolbar-middle-space"></div>
 
   <div class="toolbar-right">
-    <img class="account-shortcut" ngSrc="../../../../../../assets/material-icons/account-icon.png" alt="account-icon" height="50" width="50"></div>
+    <button style="background-color: #446DFF ; border: none" (click)="SeeProfile()" >
+    <img class="account-shortcut" ngSrc="../../../../../../assets/material-icons/account-icon.png" alt="account-icon" height="50" width="50">
+    </button>
+  </div>
 </mat-toolbar>
 <section class="content">
   <div class="bck1">
@@ -36,15 +39,15 @@
               </div>
 
 
-
+            <div *ngIf="vehicle">
               <div class="descriptioncontainer">
-                <p>Carro</p>
+                <p>{{vehicle.name }}</p>
                 <mat-divider></mat-divider>
-                <p>ABC-123</p>
+                <p>{{vehicle.licensePlate }}</p>
                 <mat-divider></mat-divider>
-                <p>Seguro</p>
+                <p>Safe</p>
               </div>
-
+            </div>
 
 
             </div>
@@ -55,12 +58,19 @@
             <img class="maps" src="../../../../../../assets/shared/examples/maps/map-2.png" alt="Maps">
           </div>
 
-          <div class="phone">
-            <button mat-icon-button class="buttonphone">
-              <img class="phoneimage" src="../../../../../../assets/material-icons/assistance-icon.png" alt="Phone">
+          <div class="buttons-section">
+            <div class="phone">
+              <button mat-icon-button class="button-phone">
+                <img class="phoneimage" src="../../../../../../assets/material-icons/assistance-icon.png" alt="Phone">
+              </button>
+            </div>
+            <button mat-icon-button class="delete-button">
+              <mat-icon>delete</mat-icon>
             </button>
 
           </div>
+
+
 
 
 

@@ -1,45 +1,87 @@
 .top-bar {
-  background-color: #3560FB;
-  height: 10%;
-  width: 100vw;
+  background-color: #446DFF;
+
   display: flex;
   align-items: center;
-  padding-left: 10px;
-  font-size: 25px;
-  mat-icon{
-    color: white;
-    /*font-size: 30px;*/
-    margin-right: 10px;
-  }
+  justify-content: center;
+  font-family: "Product Sans", sans-serif;
+  color: white;
+  height: 5rem;
 }
-.cuerpo{
-  height: 90%;
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+  font-size:  1.75rem;
+}
+.toolbar-middle-space {
+  flex: 1 1 auto;
+}
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-right: 1rem;
+}
+.back-icon {
+  color: white;
+  transform: scale(1.6);
+  transition: background-color 150ms ease;
+  border-radius: 2rem;
+  padding: 0.4rem;
+  margin-left: 1rem;
+}
+.back-icon:hover {
+  cursor: pointer;
+  background-color: #80A0FF;
+}
+
+.section-body{
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-
+  font-family: "Product Sans", sans-serif;
 }
 .container{
-  width: 100vw;
-  height: 30%;
   border-radius: 10px;
   font-size:25px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+  padding-bottom: 1.5rem;
 }
 .content{
-  width: 550px;
+  width: 40rem;
   text-align: center;
   margin-bottom: 10px;
+}
+.information-card {
+  background-color: #d6d6d6;
+  transition: background-color 150ms ease-in-out;
+  font-family: "Product Sans", sans-serif;
+  font-size: 1.25rem;
+}
+.information-card:hover {
+  background-color: #ffffff;
+}
+.label-text {
+  font-size: 1.35rem;
+}
+
+.toggle-group {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 mat-card:hover{
   cursor: pointer;
   background-color: #c4d0e6;
   transition: 0.5s ease;
 }
-
-.formulario{
+.form-section{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,6 +101,7 @@ form{
   cursor: pointer;
   margin-top: 10px;
   font-size: 20px;
+  font-family: "Product Sans", sans-serif;
 }
 
 .button_register:hover{
@@ -66,7 +109,8 @@ form{
   transition: 0.5s ease;
 }
 .social{
-  margin-top: 20px;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   display: flex;
   justify-content:space-evenly;
   img{
@@ -74,12 +118,24 @@ form{
     cursor: pointer;
   }
 }
-.footer {
+.contact-us {
+  display: flex;
+  align-items: center;
+
   position: fixed;
   right: 10px;
   bottom: 10px;
-  background-color: #EEDFF2;
-  display: flex;
-  align-items: center;
-  padding: 5px 10px 5px 10px;
+  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 99rem;
+  gap: 0.75rem;
+  transition: background-color 0.150s ease;
 }
+.contact-us:hover {
+  background-color: #abc3e8;
+}
+.mail-icon {
+  filter: brightness(0%);
+}
+
+

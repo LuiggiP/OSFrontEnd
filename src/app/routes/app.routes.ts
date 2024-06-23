@@ -1,13 +1,12 @@
 import { Routes } from '@angular/router';
 import {VehicleInformationComponent} from "../core/domain/vehicle/vehicle/vehicle-information/vehicle-information.component";
 import {CommonRegisterSectionComponent} from "../core/domain/user/register/common-register-section/common-register-section.component";
-import {LoginSectionComponent} from "../core/domain/components/login-section/login-section.component";
+import {LoginSectionComponent} from "../core/domain/user/login/login-section/login-section.component";
 import {TheStartComponent} from "../core/shared/start/start-page/the-start.component";
-import {ProfileSectionComponent} from "../core/public/components/profile-section/profile-section.component";
+import {ProfileSectionComponent} from "../core/domain/user/profile/profile-section/profile-section.component";
 import {DeviceInformationComponent} from "../core/domain/device/device-information/device-information.component";
 import {VehicleTrackingComponent} from "../core/domain/vehicle/tracking/vehicle-tracking/vehicle-tracking.component";
-import {TaxiDriverRegisterComponent} from "../core/domain/user/register/taxiDriver-register-section/taxiDriver-register-section";
-
+import {VehicleAddComponent} from "../core/domain/vehicle/vehicle/vehicle-add/vehicle-add.component";
 
 
 export const routes: Routes = [
@@ -19,9 +18,6 @@ export const routes: Routes = [
   },
   {
     path: 'common-register', component: CommonRegisterSectionComponent
-  },
-  {
-    path: 'taxi-driver-register', component: TaxiDriverRegisterComponent
   },
   {
     path: 'start', component: TheStartComponent
@@ -37,5 +33,8 @@ export const routes: Routes = [
   },
   {
     path: 'vehicle-tracking', component: VehicleTrackingComponent
+  },
+  {
+    path: 'vehicle-add', component: VehicleAddComponent
   }
 ];

@@ -1,20 +1,23 @@
-<div class="main-holder">
-  <div class="actual-container">
-    <div class="hello-user">
-      <img class="user-profile-photo" ngSrc="../../../../../../assets/shared/examples/users/person-in-a-car.png" alt="user-photo" height="250" width="250">
-      <div>Bienvenido, Lucas</div>
-    </div>
-    <div class="user-information-wrapper">
-      <p style="font-size: 1.5rem">Información básica</p>
-
-      <div class="wrapper">
-        <detail-label label="Nombre" information="Lucas Gutierrez Sanchez" [outlineWidth]=$any(2)></detail-label>
-        <detail-label label="Fecha de nacimiento" information="1 de enero de 2020" [outlineWidth]=$any(2)></detail-label>
-        <detail-label label="Sexo" information="Hombre" [outlineWidth]=$any(2)></detail-label>
-        <detail-label label="Correo" information="lucasgutierrez@gmail.com" [outlineWidth]=$any(2)></detail-label>
-        <detail-label label="Celular" information="123-456-789"></detail-label>
+  <div class="main-holder">
+    <div *ngIf="profile">
+    <div class="actual-container">
+      <div class="hello-user">
+        <img class="user-profile-photo" ngSrc="../../../../../../assets/shared/examples/users/person-in-a-car.png" alt="user-photo" height="250" width="250">
+        <div>Bienvenido, {{profile.fullName}}</div>
       </div>
+      <div class="user-information-wrapper">
+        <p style="font-size: 1.5rem">Información básica</p>
 
+        <div class="wrapper">
+          <detail-label label="Nombre" information="{{profile.fullName}}" [outlineWidth]=$any(2)></detail-label>
+          <detail-label label="DNI" information="{{profile.dni}}" [outlineWidth]=$any(2)></detail-label>
+          <detail-label label="Correo" information="{{profile.email}}" [outlineWidth]=$any(2)></detail-label>
+          <detail-label label="Fecha de nacimiento" information="{{profile.birthDate}}" [outlineWidth]=$any(2)></detail-label>
+          <detail-label label="Celular" information="{{profile.phone}}"></detail-label>
+
+        </div>
+
+      </div>
+    </div>
     </div>
   </div>
-</div>

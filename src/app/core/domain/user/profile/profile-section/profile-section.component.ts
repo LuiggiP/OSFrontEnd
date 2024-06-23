@@ -36,11 +36,5 @@ export class ProfileSectionComponent {
     password: new FormControl(''),
   });
 
-  onLogin() {
-    // Handle profile logic here
-  }
 
-  onRegister() {
-    // Handle registration logic here
-  }
 }
