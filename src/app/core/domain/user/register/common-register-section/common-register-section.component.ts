@@ -104,7 +104,7 @@ export class CommonRegisterSectionComponent {
   }
 
   onIconClick() {
-    this.router.navigate(['/start']);
+    this.router.navigate(['/login']);
   }
 
   onUserTypeChange(event: MatButtonToggleChange) {
